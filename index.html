@@ -25,6 +25,8 @@
 <H2>Below is a button trigger complePayment manualy</H1>
 <button id="cpButton">CompletePayment</button>
   
+<button id="atcButton">AddToCart</button>
+  
 <button id="ebButton">Event Builder Testing Button</button>
 <H2>Redirect</H2>
 <a href="./GTM.html">Go to GOOGLE TAG MANAGER SETUP</a>
@@ -34,6 +36,20 @@ document.getElementById("cpButton").onclick = function(){
     email: document.getElementById("emailInput").value,
 })
     ttq.track('CompletePayment',{  
+    content_id: '301',
+    quantity: 1,
+    price: 8,
+    value: 9.2,
+    currency: 'USD',})
+ }
+</script>
+  
+  <script type="text/javascript">
+document.getElementById("atcButton").onclick = function(){
+    ttq.identify({
+    email: document.getElementById("emailInput").value,
+})
+    ttq.track('AddToCart',{  
     content_id: '301',
     quantity: 1,
     price: 8,
